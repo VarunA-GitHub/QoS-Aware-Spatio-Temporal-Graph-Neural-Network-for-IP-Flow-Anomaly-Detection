@@ -40,7 +40,28 @@ The core detection engine is a custom **Deep Residual Spatio-Temporal GNN**:
 2.  **QoS Sensitivity:** Embedding QoS metrics allows detection of "Low-Rate DoS" and "Slow-Scan" attacks that evade simple volume filters.
 3.  **Semantic Robustness:** The 5-class taxonomy minimizes decision ambiguity, maximizing the F1-score across all categories.
 
+
 ---
+
+## 📂 Project Structure
+
+```bash
+├── data/                   # Dataset files (UNSW-NB15)
+├── models/                 # Saved machine learning models (.pkl)
+├── SDN/                    # SDN Controller and Network Topologies
+│   ├── nids_controller.py  # Basic controller logic
+│   ├── nids_controller_ml.py # ML-enhanced controller (ST-GNN)
+│   ├── topology.py        # Static network topology
+│   └── traffic_gen.py     # Attack traffic generator
+├── train/                  # Training utility scripts
+├── utils/                  # Helper functions for graph construction
+├── train_stgnn.py          # Main model training script
+├── generate_topology_from_data.py # Script to create topology from dataset
+└── requirements.txt        # Python dependencies
+```
+
+---
+
 
 ## 🚀 Usage
 
